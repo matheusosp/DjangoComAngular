@@ -1,10 +1,18 @@
 <h1>Member detail Component</h1>
-<p>Selected Id {{ selected_id }}</p>
-
-<input type="text" [(ngModel)]="selectedMember.name">
-<input type="text" [(ngModel)]="selectedMember.surname">
-<input type="text" [(ngModel)]="selectedMember.phone">
+<p> You are editing the Member: {{ selectedMember.name }} {{ selectedMember.surname }}</p>
+<span class="image left"style="width:315px;margin-right:0">
+    <img src="{{ selectedMember.photo }}" style="background-position:center; height:auto;max-width:90%;" alt="photo {{ selectedMember.name }}">
+</span>
+<label for="" style="display: flex;align-items: center; width: 500px;">
+    Name: <input type="text" style="margin-left:38px" [(ngModel)]="selectedMember.name">
+</label>
+<label for="" style="display: flex;justify-content:right;align-items:right;display: flex;">
+    Surname: <input type="text" style="margin-left:10px" [(ngModel)]="selectedMember.surname">
+</label>
+<label for="" style="display: flex;align-items: center;width: 500px; ">
+    Phone: <input style="margin-left:32px" type="text" [(ngModel)]="selectedMember.phone">
+</label>
 <button (click)= "update()">Update Member</button>
 
-<button (click)="newMember()">Novo</button>
 <button (click)="deleteMember()">Delete</button>
+<button (click)="newMember()">Novo</button>

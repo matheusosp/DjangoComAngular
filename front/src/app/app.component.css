@@ -1,0 +1,4 @@
+table.alt tbody tr:hover{
+    background-color: rgb(104, 177, 104);
+    color: white;
+}

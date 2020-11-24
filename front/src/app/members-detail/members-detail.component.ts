@@ -12,7 +12,7 @@ export class MembersDetailComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private api: ApiService,private router : Router, private appComponent: AppComponent) { }
 
-  selectedMember = { name: '', surname: '', phone:'', adress:'',};
+  selectedMember = { name: '', surname: '', phone:'', adress:'',photo:''};
   selected_id: any;
   ngOnInit(): void {
     this.route.paramMap.subscribe((param: ParamMap) => {
