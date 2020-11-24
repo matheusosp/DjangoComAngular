@@ -17,10 +17,16 @@ export class ApiService {
         {headers: this.httpHeaders}
       );
     };
+
     getMember(id: number) : Observable<any>{
       return this.http.get(this.baseUrl + 'members/'+id+'/', 
         {headers: this.httpHeaders}
-      );
-    }
+      )
+    };
 
+    saveNewMember(member: { name: string; surname: string; phone: string; }) : Observable<any>{
+      return this.http.post(this.baseUrl + 'members/', member,
+        {headers: this.httpHeaders}
+      )
+    };
 }

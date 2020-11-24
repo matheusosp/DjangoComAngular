@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from './api.service';
 
 @Component({
@@ -15,14 +16,14 @@ export class AppComponent {
     {name:'Member 03', id:3, surname: 'Ciclano 3', photo:'http://www.myapp.com/photo3'},
   ];
 
-  constructor( private api : ApiService){
+  constructor( private api : ApiService, private router : Router){
     this.getMembers();
   }
 
   getMembers = () => {  
     this.api.getAllMembers().subscribe(
       data => {
-        this.members = data
+        this.members = data;
       },
       error => {
         console.log("Ops", error.message);
@@ -30,13 +31,6 @@ export class AppComponent {
     );
   };
   onMemberClick = ( member: { id: number; } ) => {
-    this.api.getMember(member.id).subscribe(
-      data => {
-        console.log(data);
-      },
-      error => {
-        console.log("Ops", error.message);
-      }
-    );
+    this.router.navigate(['member-detail', member.id])
   }
 }

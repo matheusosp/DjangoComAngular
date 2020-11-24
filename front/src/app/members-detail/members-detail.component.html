@@ -1,2 +1,10 @@
 <h1>Member detail Component</h1>
-{{ selectedMember.name }}
+<p>Selected Id {{ selected_id }}</p>
+
+<input type="text" [(ngModel)]="selectedMember.name">
+<input type="text" [(ngModel)]="selectedMember.surname">
+<input type="text" [(ngModel)]="selectedMember.phone">
+<button (click)= "update()">Update Member</button>
+
+<button (click)="newMember()">Novo</button>
+<button (click)="deleteMember()">Delete</button>
