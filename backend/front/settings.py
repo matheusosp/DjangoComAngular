@@ -136,7 +136,7 @@ CORS_ORIGIN_WHITELIST = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:4200",
-    'http://35.247.247.197:8000/'
+    'http://35.247.247.197:8000'
 ]
 
 STATIC_URL = '/static/'
