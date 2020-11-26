@@ -134,11 +134,6 @@ CORS_ORIGIN_WHITELIST = [
     'http://35.247.247.197:8000'
     ]
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:4200",
-    'http://35.247.247.197:8000'
-]
-
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
