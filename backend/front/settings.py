@@ -129,6 +129,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:4200',
+    'http://35.247.247.197:8000/'
+    ]
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:4200",
