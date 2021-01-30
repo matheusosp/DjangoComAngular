@@ -9,7 +9,7 @@ The project consists of a login system to register tasks, made with react and dj
 - NODEJS
 - Typescript
 
-![Foo](https://raw.githubusercontent.com/matheusosp/blog_Django-React/main/Lista%20de%20tarefas%20-%20Google%20Chrome.jpg)
+![Foo](https://raw.githubusercontent.com/matheusosp/DjangoComAngular/main/Management%20of%20Members%20-%20Google%20Chrome.jpg)
 
 ## TO RUN LOCALLY
 ```
